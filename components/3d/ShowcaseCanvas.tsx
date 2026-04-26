@@ -41,10 +41,18 @@ export default function ShowcaseCanvas({ type, modelPath }: ShowcaseCanvasProps)
       >
         <Suspense fallback={<Loader />}>
           {type === 'car' ? (
-            <CarShowcase modelPath={modelPath} />
+
+         //   <CarShowcase modelPath={modelPath} />
+         // ) : (
+          //  <BikeShowcase modelPath={modelPath} />
+         
+          <CarShowcase />
           ) : (
-            <BikeShowcase modelPath={modelPath} />
+           <BikeShowcase useRealModel={true} />
+
           )}
+
+
         </Suspense>
       </Canvas>
     </div>

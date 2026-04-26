@@ -81,7 +81,8 @@ function ProceduralCar() {
 /* ───────────────────────────────────────────── */
 /* 🎯 MAIN */
 
-export default function CarShowcase() {
+//export default function CarShowcase()
+export default function CarShowcase({ modelPath }: { modelPath?: string }) {
   const controlsRef = useRef<any>(null);
   const useRealModel = true;
 
